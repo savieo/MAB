@@ -1,0 +1,48 @@
+'CREATE TABLE `users` (
+  `username` varchar(45) NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `sex` tinyint(4) DEFAULT NULL,
+  `ethnicity` varchar(45) DEFAULT NULL,
+  `height` decimal(10,0) DEFAULT NULL,
+  `weight` decimal(10,0) DEFAULT NULL,
+  `preference` tinyint(4) DEFAULT NULL,
+  `spamscore` int(11) DEFAULT NULL,
+  `picture` varchar(200) DEFAULT NULL,
+  `facebookLink` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) 
+
+
+'CREATE TABLE `conversation` (
+  `user1` varchar(45) NOT NULL,
+  `user2` varchar(45) DEFAULT NULL,
+  `filename` varchar(45) DEFAULT NULL,
+  `selection` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`user1`),
+  KEY `user_idx` (`user1`,`user2`),
+  KEY `user1_idx` (`user2`),
+  CONSTRAINT `user` FOREIGN KEY (`user1`) REFERENCES `users` (`username`),
+  CONSTRAINT `user1` FOREIGN KEY (`user2`) REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci'
+
+
+
+ALTER TABLE `dating`.`conversation` 
+CHANGE COLUMN `filename` `u1u2` TINYINT NULL DEFAULT NULL ,
+CHANGE COLUMN `selection` `u2u1` TINYINT NULL DEFAULT NULL ;
+
+
+ALTER TABLE `dating`.`conversation` 
+DROP FOREIGN KEY `user`;
+ALTER TABLE `dating`.`conversation` 
+CHANGE COLUMN `user1` `user1` VARCHAR(45) NULL ,
+DROP PRIMARY KEY;
+;
+
+ALTER TABLE `dating`.`conversation` 
+ADD CONSTRAINT `user`
+  FOREIGN KEY (`user1`)
+  REFERENCES `dating`.`users` (`username`);

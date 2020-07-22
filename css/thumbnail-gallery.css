@@ -1,0 +1,102 @@
+body {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+}
+
+.gallery-container h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #00060c;
+    font-size: 40px;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 9px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    /* background: linear-gradient(to right,rgb(255, 255, 255), rgb(247, 136, 136)); */
+    background: linear-gradient(to right,#FF0052, #FAA39A);
+    opacity: 0.9;
+}
+
+.tz-gallery .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.tz-gallery .lightbox img {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.tz-gallery .caption{
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+/* later updates */
+
+body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+        /* background-image: linear-gradient( 106.7deg,  rgba(251,0,145,1) -2.6%, rgba(251,134,145,1) 31%, rgba(251,158,145,1) 45.8%, rgba(251,218,145,1) 100.1% ); */
+    }
+
+    .myButton {
+        box-shadow: 3px 4px 0px 0px #995650;
+        background: linear-gradient(to bottom, #ff948a 5%, #f038d1 100%);
+        background-color: #ff948a;
+        border-radius: 15px;
+        border: 1px solid #ff4d40;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 3px 15px;
+        text-shadow: 0px 1px 0px #4f2623;
+        font-family: 'Lobster', cursive;
+    }
+
+    .myButton:hover {
+        background: linear-gradient(to bottom, #f038d1 5%, #ff948a 100%);
+        background-color: #f038d1;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }

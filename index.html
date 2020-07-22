@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MAB O Tronic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+    integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon/heart-icon.png" />
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<style>
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
+
+
+  @media (max-width: 480px) {
+    body {
+      /* background-image: url("images/couple-img-mobile.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+      background: linear-gradient(to top, rgb(255, 52, 116), #FAA39A);
+    }
+  }
+  @media (min-width: 481px) {
+    body {
+      /* desktop view */
+      background-image: url("images/bluesky.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      /* background-size: contain; */
+      background-size: cover;
+    }
+  }
+
+  .login-text {
+    opacity: 0.95;
+  }
+
+  .call-text {
+    opacity: 0.78;
+  }
+
+  .logo_heart {
+    position: fixed;
+    top: 1px;
+    left: 2px;
+  }
+</style>
+
+<body>
+  <!-- <img class="logo_heart" src='images/icon/aphrodite-logo4.png' width='245px' height='185px' alt='Aphrodite_logo' /> -->
+  <div class="wrapper">
+    <div class="login-text">
+      <button class="cta"><i class="fas fa-chevron-down fa-1x"></i></button>
+      <div class="text">
+        <form action="home.html" method="POST">
+          <a href="">Login</a>
+          <hr>
+          <br>
+          <input type="text" placeholder="Username">
+          <br>
+          <input type="password" placeholder="Password">
+          <br>
+          <button class="login-btn" type="submit">Log In</button>
+          <button type="button" class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="call-text">
+      <h1> Manage Your <span>Apartment</span></h1>
+      <button id="hov">Swipe Down</button>
+    </div>
+
+  </div>
+
+
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>
